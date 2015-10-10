@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: b3ce363efae2acc4faa0f902cf855707
-timeCreated: 1444506083
+guid: d94a98d8419e21d43a7781b738e4cd6f
+timeCreated: 1444502963
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: tirelire_cochon___01a_0
-    21300002: tirelire_cochon___01a_1
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -40,7 +38,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,27 +49,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: tirelire_cochon___01a_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 116
-        height: 111
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 1, y: 0, z: 0, w: 0}
-    - name: tirelire_cochon___01a_1
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 0
-        width: 115
-        height: 111
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -35,7 +35,10 @@ public class ClickTarget : MonoBehaviour, IClickTarget
     {
         foreach (GameObject obj in objects)
         {
-            obj.SetActive(state);
+            if (obj)
+            {
+                obj.SetActive(state);
+            }
         }
     }
 }

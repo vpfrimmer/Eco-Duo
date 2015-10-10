@@ -66,7 +66,7 @@ public class Jesus // saves us all
 }
 
 
-public class ProgressionSaver : Singleton<ProgressionSaver> {
+public class ProgressionSaver : SingletonPersistent<ProgressionSaver> {
 	
 	[HideInInspector]
 	public List<string> unlockedLevels = new List<string>(); // TODO: Débloquer les niveaux

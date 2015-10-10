@@ -18,7 +18,7 @@ public class PopupWin : Singleton<PopupWin>
 
     public void Start()
     {
-        Enable(9, 9);
+        gameObject.SetActive(false);
     }
 
     public void Enable(int found, int total)
@@ -40,10 +40,13 @@ public class PopupWin : Singleton<PopupWin>
 
             if (i >= coinToStar[starIndex] - 1)
             {
+                yield return new WaitForSeconds(delay * 2f);
+
+
                 stars[starIndex].SetTrigger("Start");
                 starIndex++;
 
-                yield return new WaitForSeconds(delay * 3f);
+                yield return new WaitForSeconds(delay * 2f);
             }
             else
             {

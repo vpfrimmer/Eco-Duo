@@ -64,6 +64,7 @@ public class SceneController : Singleton<SceneController>
                 if (OnGameEnd != null)
                 {
                     OnGameEnd();
+                    PopupWin.Instance.Enable(Instance.totalObjects, Instance._foundObjects);
                 }
             }
         }
