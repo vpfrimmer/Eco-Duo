@@ -6,21 +6,27 @@ public class Room : MonoBehaviour {
 
 	public string roomLevelName;
 	public int bestScore = 0;
+	
+	private const float FadingDuration = 1.0f;
 
-    public Text timeScoreText;
-
+	private Text scoreText;
+	
+	void Awake() {
+		scoreText = GetComponentInChildren<Text>();
+	}
+	
 	void Start()
     {
-	    timeScoreText.text = bestScore.ToString();
+	    scoreText.text = bestScore.ToString();
     }
 
 	public void RoomIsClicked() {
-        Application.LoadLevel(roomLevelName);
+		StartCoroutine(LevelLoader.Instance.FadeAndLaunch(roomLevelName));
 	}
 	
 	public void SetBestScore(int s) {
 		bestScore = s;
-		timeScoreText.text = bestScore.ToString();
+		scoreText.text = bestScore.ToString();
 	}
 
 	public static string FormatTimeScore(int score)
