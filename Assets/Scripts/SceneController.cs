@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using SwissArmyKnife;
 
 public class SceneController : Singleton<SceneController>
@@ -7,9 +8,13 @@ public class SceneController : Singleton<SceneController>
     public static event SceneAction OnGameStart;
     public static event SceneAction OnGameEnd;
 
+
 	private SceneState _state = SceneState.intro;
-	
-	public int timeLimit = 60;			// Le temps pour finir le niveau (en secondes)
+
+    public Animator coinAnimator;
+    public Text coinCounter;
+
+    public int timeLimit = 60;			// Le temps pour finir le niveau (en secondes)
 	public int totalObjects = 0;		// Le nombre d'objets total dans la scène, calculé au Start
 	private int _foundObjects = 0;		// Le nombre d'objets trouvés (aka "cliqués")
 	public int foundObjects
@@ -22,7 +27,10 @@ public class SceneController : Singleton<SceneController>
 		set 
 		{
 			_foundObjects = value;
-			
+
+            PlayCoinAnim();
+            UpdateCounter();
+            	
 			// Quand tous les objets sont trouvés, la partie est finie
 			if(_foundObjects == totalObjects)
 			{
@@ -61,8 +69,10 @@ public class SceneController : Singleton<SceneController>
         }
     }
 	
-	void Start() {
+	void Start()
+    {
 		totalObjects = Object.FindObjectsOfType<ClickTarget>().Length;
+        UpdateCounter();
 	}
 
     public enum SceneState
@@ -70,5 +80,21 @@ public class SceneController : Singleton<SceneController>
         intro,
         game,
         ended
+    }
+
+    void PlayCoinAnim()
+    {
+        if (coinAnimator)
+        {
+            coinAnimator.SetTrigger("Start");
+        }
+    }
+
+    void UpdateCounter()
+    {
+        if (coinCounter)
+        {
+            coinCounter.text = foundObjects + "/" + totalObjects;
+        }
     }
 }

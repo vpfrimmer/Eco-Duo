@@ -30,6 +30,17 @@ ModelImporter:
     100044: table_chevet
     100046: tablette
     100048: tapis
+    100050: chargeur_branche
+    100052: chargeur_debranche
+    100054: console
+    100056: fenetre
+    100058: jouet_circuit
+    100060: jouet_train
+    100062: lit_01
+    100064: lit_02
+    100066: murs
+    100068: rideau_ferme
+    100070: rideau_ouvert
     400000: armoire
     400002: bureau
     400004: chaise
@@ -55,6 +66,17 @@ ModelImporter:
     400044: table_chevet
     400046: tablette
     400048: tapis
+    400050: chargeur_branche
+    400052: chargeur_debranche
+    400054: console
+    400056: fenetre
+    400058: jouet_circuit
+    400060: jouet_train
+    400062: lit_01
+    400064: lit_02
+    400066: murs
+    400068: rideau_ferme
+    400070: rideau_ouvert
     2300000: armoire
     2300002: bureau
     2300004: chaise
@@ -79,6 +101,17 @@ ModelImporter:
     2300042: table_chevet
     2300044: tablette
     2300046: tapis
+    2300048: chargeur_branche
+    2300050: chargeur_debranche
+    2300052: console
+    2300054: fenetre
+    2300056: jouet_circuit
+    2300058: jouet_train
+    2300060: lit_01
+    2300062: lit_02
+    2300064: murs
+    2300066: rideau_ferme
+    2300068: rideau_ouvert
     3300000: armoire
     3300002: bureau
     3300004: chaise
@@ -103,6 +136,17 @@ ModelImporter:
     3300042: table_chevet
     3300044: tablette
     3300046: tapis
+    3300048: chargeur_branche
+    3300050: chargeur_debranche
+    3300052: console
+    3300054: fenetre
+    3300056: jouet_circuit
+    3300058: jouet_train
+    3300060: lit_01
+    3300062: lit_02
+    3300064: murs
+    3300066: rideau_ferme
+    3300068: rideau_ouvert
     4300000: sol
     4300002: bureau
     4300004: mur_01
@@ -127,6 +171,17 @@ ModelImporter:
     4300042: multiprise
     4300044: prise_02
     4300046: circuit_voiture
+    4300048: murs
+    4300050: chargeur_branche
+    4300052: console
+    4300054: rideau_ouvert
+    4300056: lit_01
+    4300058: lit_02
+    4300060: jouet_circuit
+    4300062: jouet_train
+    4300064: fenetre
+    4300066: rideau_ferme
+    4300068: chargeur_debranche
   materials:
     importMaterials: 1
     materialName: 0
