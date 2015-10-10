@@ -8,6 +8,7 @@ public class ScreenFader : MonoBehaviour {
     // Use this for initialization
     void Start () {
         blackBackground = GetComponent<Image>();
+        blackBackground.color = Color.black;
 	}
 	
 	// Update is called once per frame
@@ -20,6 +21,10 @@ public class ScreenFader : MonoBehaviour {
                 var alpha = Mathf.Lerp(blackBackground.color.a, 0, Time.deltaTime);
                 blackBackground.color = new Color(blackBackground.color.r, blackBackground.color.b, blackBackground.color.g, alpha);
             }
+        }
+        else
+        {
+            gameObject.SetActive(false);
         }
     }
 }

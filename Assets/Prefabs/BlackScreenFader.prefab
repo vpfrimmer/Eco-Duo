@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: .958999991}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccd49ac85b336046a44dcbde1601f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackScreenLastingTime: 2
+  blackScreenLastingTime: 0
 --- !u!222 &22270328
 CanvasRenderer:
   m_ObjectHideFlags: 1

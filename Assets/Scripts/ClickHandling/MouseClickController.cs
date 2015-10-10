@@ -2,17 +2,21 @@
 
 public class MouseClickController : MonoBehaviour
 {
-    Animation mouseClickAnim;
+    public GameObject mouseClickGizmo;
+    private Animator mouseClickAnimator;
+
     void Start()
     {
-        mouseClickAnim = this.GetComponent<Animation> ();
+        mouseClickAnimator = mouseClickGizmo.GetComponent<Animator> ();
     }
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && SceneController.state == SceneController.SceneState.game)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             PlayMouseClickEffect();
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
@@ -31,8 +35,11 @@ public class MouseClickController : MonoBehaviour
     void PlayMouseClickEffect()
     {
         var mouseOnScreen = Input.mousePosition;
-        mouseOnScreen.z = Camera.main.transform.position.z;
-        gameObject.transform.position = Camera.main.ScreenToWorldPoint(mouseOnScreen);
-        mouseClickAnim.Play();
+
+        RectTransform rectTransform = mouseClickGizmo.transform as RectTransform;
+
+        rectTransform.anchoredPosition = mouseOnScreen;
+
+        mouseClickAnimator.SetTrigger("Start");
     }
 }
