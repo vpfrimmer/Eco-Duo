@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 2482647862dda4f459436120a1aa2818
+timeCreated: 1444442058
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: armoire
+    100002: bureau
+    100004: chaise
+    100006: chargeur
+    100008: circuit_voiture
+    100010: etagere
+    100012: lampe_chevet
+    100014: lit
+    100016: //RootNode
+    100018: multiprise
+    100020: mur_01
+    100022: mur_02
+    100024: mur_03
+    100026: nintendo_DS
+    100028: plafond
+    100030: plafonnier
+    100032: porte
+    100034: prise_01
+    100036: prise_02
+    100038: radiateur
+    100040: rideau001
+    100042: sol
+    100044: table_chevet
+    100046: tablette
+    100048: tapis
+    400000: armoire
+    400002: bureau
+    400004: chaise
+    400006: chargeur
+    400008: circuit_voiture
+    400010: etagere
+    400012: lampe_chevet
+    400014: lit
+    400016: //RootNode
+    400018: multiprise
+    400020: mur_01
+    400022: mur_02
+    400024: mur_03
+    400026: nintendo_DS
+    400028: plafond
+    400030: plafonnier
+    400032: porte
+    400034: prise_01
+    400036: prise_02
+    400038: radiateur
+    400040: rideau001
+    400042: sol
+    400044: table_chevet
+    400046: tablette
+    400048: tapis
+    2300000: armoire
+    2300002: bureau
+    2300004: chaise
+    2300006: chargeur
+    2300008: circuit_voiture
+    2300010: etagere
+    2300012: lampe_chevet
+    2300014: lit
+    2300016: multiprise
+    2300018: mur_01
+    2300020: mur_02
+    2300022: mur_03
+    2300024: nintendo_DS
+    2300026: plafond
+    2300028: plafonnier
+    2300030: porte
+    2300032: prise_01
+    2300034: prise_02
+    2300036: radiateur
+    2300038: rideau001
+    2300040: sol
+    2300042: table_chevet
+    2300044: tablette
+    2300046: tapis
+    3300000: armoire
+    3300002: bureau
+    3300004: chaise
+    3300006: chargeur
+    3300008: circuit_voiture
+    3300010: etagere
+    3300012: lampe_chevet
+    3300014: lit
+    3300016: multiprise
+    3300018: mur_01
+    3300020: mur_02
+    3300022: mur_03
+    3300024: nintendo_DS
+    3300026: plafond
+    3300028: plafonnier
+    3300030: porte
+    3300032: prise_01
+    3300034: prise_02
+    3300036: radiateur
+    3300038: rideau001
+    3300040: sol
+    3300042: table_chevet
+    3300044: tablette
+    3300046: tapis
+    4300000: sol
+    4300002: bureau
+    4300004: mur_01
+    4300006: etagere
+    4300008: chaise
+    4300010: lit
+    4300012: armoire
+    4300014: radiateur
+    4300016: tapis
+    4300018: table_chevet
+    4300020: mur_02
+    4300022: mur_03
+    4300024: porte
+    4300026: prise_01
+    4300028: lampe_chevet
+    4300030: plafond
+    4300032: tablette
+    4300034: chargeur
+    4300036: plafonnier
+    4300038: nintendo_DS
+    4300040: rideau001
+    4300042: multiprise
+    4300044: prise_02
+    4300046: circuit_voiture
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
