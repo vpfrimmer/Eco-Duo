@@ -19,7 +19,10 @@ public class ClickTarget : MonoBehaviour, IClickTarget
         if (clickable && SceneController.state == SceneController.SceneState.game)
         {
             SetAllActive(toHide, false);
-            SetAllActive(toShow, true);
+	        SetAllActive(toShow, true);
+	        
+	        SceneController.Instance.foundObjects++;
+	        
             if (OnClicked != null)
             {
                 OnClicked();

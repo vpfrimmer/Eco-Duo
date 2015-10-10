@@ -9,7 +9,7 @@ public class ProgressionSaver : Singleton<ProgressionSaver> {
 	public List<string> unlockedLevels = new List<string>(); // TODO: Débloquer les niveaux
 	public Dictionary<string, int> levelScores = new Dictionary<string, int>();
 	
-	private float timer = 0.0f;
+	public float timer = 0.0f;
 	private bool isRecording = false;
 	
 	private List<Room> allRooms = new List<Room>();
@@ -17,7 +17,10 @@ public class ProgressionSaver : Singleton<ProgressionSaver> {
 	void Awake () {
 		DontDestroyOnLoad(this);
 		UpdateLevelStats();
-		//TODO Linker le lancement du timer avec les events de lancement de partie
+		
+		// Link le lancement du timer avec les events de lancement de partie
+		SceneController.OnGameStart += OnGameStart;
+		SceneController.OnGameEnd += OnGameEnd;
 	}
 	
 	void Update() {
@@ -33,12 +36,13 @@ public class ProgressionSaver : Singleton<ProgressionSaver> {
 	}
 	
 	void UpdateLevelStats() {
+		
 		// Ca regénère la liste des rooms à chaque fois que la méthode est appelée. C'est pas beau mais on est pressés.
 		allRooms = new List<Room>(Object.FindObjectsOfType<Room>());
 		
 		foreach(Room r in allRooms) {
 			if(levelScores.ContainsKey(r.roomLevelName)) {
-				r.SetBestTime(levelScores[r.roomLevelName]);
+				r.SetBestScore(levelScores[r.roomLevelName]);
 			}
 		}
 	}
@@ -54,11 +58,12 @@ public class ProgressionSaver : Singleton<ProgressionSaver> {
 	}
 	
 	void SaveProgress() {
-		string currentLevelName = "LOL"; //TODO Récupérer le vrai nom du level (Louis?)
+		string currentLevelName = Application.loadedLevelName;
 		SetLevelScore(currentLevelName, (int)timer);
 	}
 	
 	void SetLevelScore(string levelName, int newScore) {
+		
 		// Si le niveau n'est pas encore repertorié, on l'ajoute au dico
 		if(!levelScores.ContainsKey(levelName)) {
 			levelScores.Add(levelName, newScore);

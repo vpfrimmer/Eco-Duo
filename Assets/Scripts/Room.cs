@@ -5,22 +5,22 @@ using System.Collections;
 public class Room : MonoBehaviour {
 
 	public string roomLevelName;
-	public int bestTimeScore = 0;
+	public int bestScore = 0;
 
     public Text timeScoreText;
 
 	void Start()
     {
-        timeScoreText.text = FormatTimeScore(bestTimeScore);
+	    timeScoreText.text = bestScore.ToString();
     }
 
 	public void RoomIsClicked() {
         Application.LoadLevel(roomLevelName);
 	}
 	
-	public void SetBestTime(int t) {
-		bestTimeScore = t;
-		timeScoreText.text = FormatTimeScore(bestTimeScore);
+	public void SetBestScore(int s) {
+		bestScore = s;
+		timeScoreText.text = bestScore.ToString();
 	}
 
 	public static string FormatTimeScore(int score)
