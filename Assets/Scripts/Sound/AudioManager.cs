@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using SwissArmyKnife;
+using System.Collections;
 
 /// <summary>
 /// Allows basic sound control.
@@ -15,12 +16,26 @@ public class AudioManager : SingletonPersistent<AudioManager>
     public AudioSource music;
     bool isNoiseOn = true;
 
-    public void Play(AudioClip clip)
+    public void Play(AudioClip clip, float volume = 1f, float time = 0f)
     {
         if (isNoiseOn)
         {
-            noise.PlayOneShot(clip);
+            if (time > 0f)
+            {
+                StartCoroutine(PlayCoroutine(clip, volume, time));
+            }
+            else
+            {
+                noise.PlayOneShot(clip, volume);
+            }
         }
+    }
+
+    IEnumerator PlayCoroutine(AudioClip clip, float volume, float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        noise.PlayOneShot(clip, volume);
     }
 
     void Start()

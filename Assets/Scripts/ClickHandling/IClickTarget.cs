@@ -1,5 +1,5 @@
 ﻿
 public interface IClickTarget
 {
-    void OnTargetClicked();
+    bool OnTargetClicked();
 }

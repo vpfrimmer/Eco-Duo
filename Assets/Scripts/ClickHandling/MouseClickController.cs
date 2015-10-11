@@ -3,6 +3,7 @@
 public class MouseClickController : MonoBehaviour
 {
     public GameObject mouseClickGizmo;
+    public AudioClip coinSound;
     private Animator mouseClickAnimator;
 
     void Start()
@@ -24,11 +25,11 @@ public class MouseClickController : MonoBehaviour
 
                 if (clickHandler != null)
                 {
-                    clickHandler.OnTargetClicked();
+                    if (clickHandler.OnTargetClicked())
+                        AudioManager.Instance.Play(coinSound, 1f, 0.3f); ;
                     print("Click");
                 }
             }
-                
         }
     }
 

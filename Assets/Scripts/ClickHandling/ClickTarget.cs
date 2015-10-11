@@ -17,7 +17,7 @@ public class ClickTarget : MonoBehaviour, IClickTarget
         SetAllActive(toShow, false);
     }
 
-    public void OnTargetClicked()
+    public bool OnTargetClicked()
     {
         if (clickable && SceneController.state == SceneController.SceneState.game)
         {
@@ -36,7 +36,9 @@ public class ClickTarget : MonoBehaviour, IClickTarget
                 OnClicked();
             }
             clickable = false;
+            return true;
         }
+        return false;
     }
 
     private void SetAllActive(GameObject[] objects, bool state)
