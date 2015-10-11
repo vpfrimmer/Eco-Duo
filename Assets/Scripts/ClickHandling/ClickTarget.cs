@@ -7,6 +7,9 @@ public class ClickTarget : MonoBehaviour, IClickTarget
 
     public GameObject[] toHide;
     public GameObject[] toShow;
+
+    public AudioClip sound;
+
     private bool clickable = true;
 
     void Start()
@@ -20,6 +23,11 @@ public class ClickTarget : MonoBehaviour, IClickTarget
         {
             SetAllActive(toHide, false);
 	        SetAllActive(toShow, true);
+
+            if (sound)
+            {
+                AudioManager.Instance.Play(sound);
+            }
 	        
 	        SceneController.Instance.foundObjects++;
 	        

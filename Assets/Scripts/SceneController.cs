@@ -17,6 +17,10 @@ public class SceneController : Singleton<SceneController>
     public int timeLimit = 60;			// Le temps pour finir le niveau (en secondes)
 	public int totalObjects = 0;		// Le nombre d'objets total dans la scène, calculé au Start
 	private int _foundObjects = 0;		// Le nombre d'objets trouvés (aka "cliqués")
+
+    public AudioClip clipOnStart;
+    public AudioClip clipOnGame;
+
 	public int foundObjects
 	{
 		get 
@@ -50,22 +54,11 @@ public class SceneController : Singleton<SceneController>
             Instance._state = value;
             if (value == SceneState.game)
             {
-            	Debug.Log("Game Start !");
-            	
-                if (OnGameStart != null)
-                {
-                    OnGameStart();
-                }
+                Instance.Game();
             }
             else if (value == SceneState.ended)
             {
-	            Debug.Log("Game End !");
-            	
-                if (OnGameEnd != null)
-                {
-                    OnGameEnd();
-                    PopupWin.Instance.Enable(Instance.totalObjects, Instance._foundObjects);
-                }
+                Instance.End();
             }
         }
     }
@@ -74,7 +67,30 @@ public class SceneController : Singleton<SceneController>
     {
 		totalObjects = Object.FindObjectsOfType<ClickTarget>().Length;
         UpdateCounter();
+        AudioManager.Instance.Play(clipOnStart);
 	}
+
+    void Game()
+    {
+        Debug.Log("Game Start !");
+
+        if (OnGameStart != null)
+        {
+            OnGameStart();
+        }
+        AudioManager.Instance.Play(clipOnGame);
+    }
+
+    void End()
+    {
+        Debug.Log("Game End !");
+
+        if (OnGameEnd != null)
+        {
+            OnGameEnd();
+        }
+        PopupWin.Instance.Enable(Instance.totalObjects, Instance._foundObjects);
+    }
 
     public enum SceneState
     {

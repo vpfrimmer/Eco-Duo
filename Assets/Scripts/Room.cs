@@ -17,7 +17,7 @@ public class Room : MonoBehaviour {
 	
 	void Start()
     {
-	    scoreText.text = bestScore.ToString();
+	    //scoreText.text = bestScore.ToString();
     }
 
 	public void RoomIsClicked() {
@@ -26,7 +26,7 @@ public class Room : MonoBehaviour {
 	
 	public void SetBestScore(int s) {
 		bestScore = s;
-		scoreText.text = bestScore.ToString();
+		//scoreText.text = bestScore.ToString();
 	}
 
 	public static string FormatTimeScore(int score)
