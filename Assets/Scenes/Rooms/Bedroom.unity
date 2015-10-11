@@ -2758,14 +2758,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22379136, guid: 96c7be4d6a8b7e4488eea2d6cf46ce96, type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 277204687}
     - target: {fileID: 115062, guid: 96c7be4d6a8b7e4488eea2d6cf46ce96, type: 2}
       propertyPath: m_Name
       value: canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 22379136, guid: 96c7be4d6a8b7e4488eea2d6cf46ce96, type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 277204687}
     - target: {fileID: 22405760, guid: 96c7be4d6a8b7e4488eea2d6cf46ce96, type: 2}
       propertyPath: m_SizeDelta.x
       value: 375
