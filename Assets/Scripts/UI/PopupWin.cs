@@ -31,7 +31,7 @@ public class PopupWin : Singleton<PopupWin>
         gameObject.SetActive(true);
         //if (found < coinToStar[0])
         //{
-            nextLevel.interactable = false;
+          //  nextLevel.interactable = false;
         //}
 
         StartCoroutine(WinCoroutine(found));

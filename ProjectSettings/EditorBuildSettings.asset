@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelection.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/Bedroom.unity
+  - enabled: 1
+    path: Assets/Scenes/Fin.unity
